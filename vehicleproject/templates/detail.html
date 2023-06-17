@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block body %}
+<img src="{{vehicle.img.url}}"><br>
+{{vehicle.name}}<br>
+{{vehicle.desc}}<br>
+{{vehicle.year}}<br>
+<a class="btn btn-warning" href="{% url 'vehicleapp:update' vehicle.id %}">update</a><br>
+<a class="btn btn-danger" href="{% url 'vehicleapp:delete' vehicle.id %}">delete</a><br>
+{% endblock %}
